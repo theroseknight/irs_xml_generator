@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     root 'home#index'
     get 'verification/build_elements' => 'verification#build_elements'
     get 'verification/no_new_elements' => 'verification#no_new_elements'
+    get 'verification/no_new_attributes' => 'verification#no_new_attributes'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

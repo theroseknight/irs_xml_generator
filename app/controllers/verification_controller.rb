@@ -37,14 +37,26 @@ class VerificationController < ApplicationController
 
   def no_new_elements
   	start_time = Time.now
-  	all_elements = Element.all
+  	
   	#Step 7 - Verify that no new elements have been encountered
+    all_elements = Element.all
   	VerificationHelpers.add_new_elements_to_hash(all_elements)
   	
   	end_time = Time.now
   	final_time = end_time - start_time
   	human_time = VerificationHelpers.dev_output_format(final_time)
   	render json:{time:human_time}
+  end
+
+  def no_new_attributes
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
   end
 	
 #End of Verification Class	

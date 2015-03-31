@@ -32,44 +32,13 @@ module VerificationHelpers
 	#Takes in an array of elements as an argument and check for any new elements. It infors you a new element is present if found
 	def self.add_new_elements_to_hash(array)
 		array.each do |blank_element_name|
-			if @unique_elements_with_attribute_names.include?(blank_element_name.name) == false
-				puts "#{@xsd_file_name} file contains new element #{blank_element_name}"
+			if blank_element_name.known_element_types.include?(blank_element_name.name) == false
+				puts "#{@xsd_file_name} file contains new element #{blank_element_name.name}"
+				aaa
 			end
 		end
 	end
 
 
-#Storage of unique identified elements and their attributes to search new XML files against
-@unique_elements_with_attribute_names = {
-		"xsd:schema" => ["version", "xmlns", "targetNamespace","elementFormDefault","attributeFormDefault"],
-		"xsd:annotation" => [],
-		"xsd:documentation" => [],
-		"xsd:include" => ["schemaLocation"],
-		"xsd:element" => ["name","type","minOccurs","maxOccurs","fixed"],
-		"xsd:complexType" => ["name"],
-		"xsd:complexContent" => [],
-		"xsd:extension" => ["base"],
-		"xsd:attributeGroup" => ["ref"],
-		"xsd:attribute" => ["name","type","fixed"],
-		"xsd:sequence" => [],
-		"xsd:choice" => ["minOccurs"],
-		"xsd:simpleType" => ["name"],
-		"xsd:restriction" => ["base"],
-		"xsd:enumeration" => ["value"],
-		"xsd:simpleContent" => [],
-		"xsd:pattern" => ["value"],
-		"xsd:maxLength" => ["value"],
-		"xsd:list" => ["itemType"],
-		"xsd:totalDigits" => ["value"],
-		"xsd:fractionDigits" =>["value"],
-		"xsd:description" => [],
-		"Description" => [],
-		"TaxYear" => [],
-		"MaturityLevel" => [],
-		"ReleaseDate" => [],
-		"LineNumber" => [],
-		"ELFFieldNumber" => [],
-		"Purpose" => [],
-}
 #End Module
 end

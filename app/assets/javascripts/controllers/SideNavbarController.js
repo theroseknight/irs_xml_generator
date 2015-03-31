@@ -17,7 +17,16 @@ IrsXmlGenerator.SideNavbarController = Ember.Controller.extend({
 						success:function(data){
 							$("#verify-2-a").text("Done - No Errors!")
 							$("#verify-2-b").text(data.time)
-							spinner.hideWorkingSpinner()
+							$("#verify-table-body").append("<tr><td>3</td><td>Ensure the file contains no new attribute types</td><td id='verify-3-a'>Working...</td><td id='verify-3-b'></td></tr>")
+							$.ajax({
+								url:"verification/no_new_attributes",
+								method:"GET",
+								success:function(data){
+									$("#verify-3-a").text("Done - No Errors!")
+									$("#verify-3-b").text(data.time)
+									spinner.hideWorkingSpinner()
+								}
+							})		
 						}
 					})					
 				}
