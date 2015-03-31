@@ -1,0 +1,20 @@
+<ul class="nav nav-pills nav-stacked col-xs-2">
+	{{#if homeView}}
+		<li class="">{{#link-to "home.verification" id="" class="btn navbar-btn sidebar" }} <b>XML Verification</b>{{/link-to}}</li>
+		<li class="">{{#link-to "home.list" id="" class="btn navbar-btn sidebar" }} <b>Element List</b>{{/link-to}}</li>
+		<li class="">{{#link-to "home.builder" id="" class="btn navbar-btn sidebar" }} <b>Generate Files</b>{{/link-to}}</li>
+	{{/if}}
+
+	{{#if verificationView}}
+		<li class="">{{#link-to "home" id="" class="btn navbar-btn sidebar" }} <b>Return Home</b>{{/link-to}}</li>
+		<li><a {{action "runVerification"}} id="" class="btn navbar-btn sidebar"><b>Run Verification</b></a></li>
+	{{/if}}
+
+	{{#if listView}}
+		<li class="">{{#link-to "home" id="" class="btn navbar-btn sidebar" }} <b>Return Home</b>{{/link-to}}</li>
+	{{/if}}
+
+	{{#if builderView}}
+		<li class="">{{#link-to "home" id="" class="btn navbar-btn sidebar" }} <b>Return Home</b>{{/link-to}}</li>
+	{{/if}}
+</ul>
