@@ -12,7 +12,14 @@ Rails.application.routes.draw do
     get 'verification/build_elements' => 'verification#build_elements'
     get 'verification/no_new_elements' => 'verification#no_new_elements'
     get 'verification/no_new_attributes' => 'verification#no_new_attributes'
-
+    get 'verification/no_new_required_attributes' => 'verification#no_new_required_attributes'
+    get 'verification/all_required_attributes' => 'verification#all_required_attributes'
+    get 'verification/no_new_closing_tags' => 'verification#no_new_closing_tags'
+    get 'verification/all_required_closing_tags' => 'verification#all_required_closing_tags'
+    get 'verification/all_never_closing_tags' => 'verification#all_never_closing_tags'
+    get 'verification/no_new_child_relationships' => 'verification#no_new_child_relationships'
+    get 'verification/no_new_required_child_relationships' => 'verification#no_new_required_child_relationships'
+    get 'verification/all_required_child_relationships' => 'verification#all_required_child_relationships'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

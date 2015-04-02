@@ -51,6 +51,94 @@ class VerificationController < ApplicationController
   def no_new_attributes
     start_time = Time.now
 
+
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def no_new_required_attributes
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def all_required_attributes
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def no_new_closing_tags
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def all_required_closing_tags
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def all_never_closing_tags
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def no_new_child_relationships
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def no_new_required_child_relationships
+    start_time = Time.now
+
+    
+    
+    end_time = Time.now
+    final_time = end_time - start_time
+    human_time = VerificationHelpers.dev_output_format(final_time)
+    render json:{time:human_time}
+  end
+
+  def all_required_child_relationships
+    start_time = Time.now
+
     
     
     end_time = Time.now
